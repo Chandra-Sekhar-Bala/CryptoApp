@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CryptoApp</string>
+    <string name="eShop">€-$hop</string>
+    <string name="wallet">Wallet</string>
+    <string name="exchange">Exchange</string>
+    <string name="launchpads">Launchpads</string>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+
+    <item
+        android:id="@+id/eshop"
+        android:icon="@drawable/icon_eshop"
+        android:title="@string/eShop" />
+    <item
+        android:id="@+id/exchange"
+        android:enabled="true"
+        android:icon="@drawable/icon_exchange"
+        android:title="@string/exchange" />
+    <item
+        android:id="@+id/moon"
+        android:icon="@drawable/icon_moon"
+        android:title="cdc" />
+    <item
+        android:id="@+id/launchpads"
+        android:icon="@drawable/icon_launchpads"
+        android:title="@string/launchpads" />
+    <item
+        android:id="@+id/wallet"
+        android:icon="@drawable/icon_wallet"
+        android:title="@string/wallet" />
+
+
+</menu>
