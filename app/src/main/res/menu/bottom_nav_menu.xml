@@ -10,11 +10,6 @@
         android:icon="@drawable/icon_exchange"
         android:title="@string/exchange" />
     <item
-        android:id="@+id/moon"
-        android:enabled="false"
-        android:icon="@drawable/icon_moon"
-        android:title="" />
-    <item
         android:id="@+id/launchpadFragment"
         android:icon="@drawable/icon_launchpads"
         android:title="@string/launchpads" />
