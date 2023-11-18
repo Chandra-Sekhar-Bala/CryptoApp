@@ -26,10 +26,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"
-                android:fontFamily="@font/inter_medium"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/exchanges"
+                android:textAllCaps="true"
                 android:textColor="@color/text_color"
-                android:textSize="@dimen/_16ssp"
-                android:text="@string/exchange" />
+                android:textSize="@dimen/_20ssp" />
 
             <ImageView
                 android:layout_width="@dimen/_25sdp"

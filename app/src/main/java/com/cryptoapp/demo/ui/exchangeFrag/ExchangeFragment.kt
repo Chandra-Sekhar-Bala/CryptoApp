@@ -23,7 +23,7 @@ class ExchangeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         logthis("Initiated!")
-        activity?.findViewById<TextView>(R.id.current_frag_name)?.text = "Exchange"
+        activity?.findViewById<TextView>(R.id.current_frag_name)?.text = "Exchanges"
         return binding.root
     }
 

@@ -3,6 +3,7 @@
     <string name="eShop">€-$hop</string>
     <string name="wallet">Wallet</string>
     <string name="exchange">Exchange</string>
+    <string name="exchanges">Exchanges</string>
     <string name="launchpads">Launchpads</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
