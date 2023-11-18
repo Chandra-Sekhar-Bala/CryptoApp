@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/exchangeFragment">
+    <fragment
+        android:id="@+id/exchangeFragment"
+        android:name="com.cryptoapp.demo.ui.exchangeFrag.ExchangeFragment"
+        android:label="fragment_exchange"
+        tools:layout="@layout/fragment_exchange" />
+    <fragment
+        android:id="@+id/eShopFragment"
+        android:name="com.cryptoapp.demo.ui.eShopFragment"
+        android:label="fragment_e_shop"
+        tools:layout="@layout/fragment_e_shop" />
+    <fragment
+        android:id="@+id/walletFragment"
+        android:name="com.cryptoapp.demo.ui.WalletFragment"
+        android:label="fragment_wallet"
+        tools:layout="@layout/fragment_wallet" />
+    <fragment
+        android:id="@+id/launchpadFragment"
+        android:name="com.cryptoapp.demo.ui.LaunchpadFragment"
+        android:label="fragment_launchpad"
+        tools:layout="@layout/fragment_launchpad" />
+</navigation>

@@ -1,32 +1,31 @@
 package com.cryptoapp.demo.ui.exchangeFrag
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.cryptoapp.demo.R
+import com.cryptoapp.demo.databinding.FragmentExchangeBinding
+import com.cryptoapp.demo.helper.logthis
 
 class ExchangeFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = ExchangeFragment()
+    private val binding by lazy {
+        FragmentExchangeBinding.inflate(
+            layoutInflater
+        )
     }
-
-    private lateinit var viewModel: ExchangeViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_exchange, container, false)
+    ): View {
+        logthis("Initiated!")
+        activity?.findViewById<TextView>(R.id.current_frag_name)?.text = "Exchange"
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ExchangeViewModel::class.java)
-        // TODO: Use the ViewModel
-    }
 
 }

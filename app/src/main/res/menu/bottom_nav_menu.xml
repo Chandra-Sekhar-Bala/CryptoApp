@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    >
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/eshop"
+        android:id="@+id/eShopFragment"
         android:icon="@drawable/icon_eshop"
         android:title="@string/eShop" />
     <item
-        android:id="@+id/exchange"
-        android:enabled="true"
+        android:id="@+id/exchangeFragment"
         android:icon="@drawable/icon_exchange"
         android:title="@string/exchange" />
     <item
@@ -18,13 +15,12 @@
         android:icon="@drawable/icon_moon"
         android:title="" />
     <item
-        android:id="@+id/launchpads"
+        android:id="@+id/launchpadFragment"
         android:icon="@drawable/icon_launchpads"
         android:title="@string/launchpads" />
     <item
-        android:id="@+id/wallet"
+        android:id="@+id/walletFragment"
         android:icon="@drawable/icon_wallet"
         android:title="@string/wallet" />
-
 
 </menu>
