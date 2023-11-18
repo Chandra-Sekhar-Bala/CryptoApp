@@ -5,4 +5,8 @@
     <color name="bottom_nav">#0B0B0B</color>
     <color name="grey">#595555</color>
     <color name="text_color">#0B0B0B</color>
+    <color name="green">#00CE08</color>
+    <color name="search_bg">#0D0B0B0B</color>
+    <color name="outline_color">#4D0B0B0B</color>
+    <color name="default_text_color">#4D0B0B0B</color>
 </resources>
