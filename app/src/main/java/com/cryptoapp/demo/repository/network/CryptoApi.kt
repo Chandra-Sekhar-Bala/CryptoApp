@@ -14,12 +14,13 @@ interface CryptoApi {
     suspend fun getCrypto(
         @Query("limit") limit: Int,
         @Header("X-CMC_PRO_API_KEY") key: String,
+        @Query("sort") value: String = CONSTANTS.SORT_KEY
     ): Response
 
     @GET("info")
     suspend fun getLogo(
+        @Header("X-CMC_PRO_API_KEY") key: String,
         @Query("id") id: Int,
-        @Header("X-CMC_PRO_API_KEY") key: String
     ): CryptoLogo
 
 }

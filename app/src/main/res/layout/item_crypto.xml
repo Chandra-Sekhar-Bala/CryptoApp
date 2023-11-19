@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_10sdp"
         android:fontFamily="@font/inter_bold"
-        android:text="BTC"
+        tools:text="BTC"
         android:textSize="@dimen/_16ssp"
         app:layout_constraintStart_toEndOf="@+id/top_icon"
         app:layout_constraintTop_toTopOf="@+id/top_icon" />
@@ -29,16 +29,19 @@
     <TextView
         android:id="@+id/top_name"
         style="@style/textStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_medium"
         android:text="@string/bitcoin"
-        android:textSize="@dimen/_14ssp"
+        android:layout_marginEnd="@dimen/_10sdp"
         android:textColor="@color/default_text_color"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toStartOf="@+id/top_growth"
         app:layout_constraintStart_toStartOf="@id/top_codeName"
         app:layout_constraintTop_toBottomOf="@id/top_codeName" />
 
     <ImageView
+        android:id="@+id/img_graph"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_loss"
@@ -55,7 +58,7 @@
         android:layout_marginStart="@dimen/_10sdp"
         android:layout_marginEnd="@dimen/_16sdp"
         android:fontFamily="@font/inter_bold"
-        android:text="$USD"
+        tools:text="$USD"
         android:textSize="@dimen/_14ssp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/top_codeName" />
