@@ -13,8 +13,7 @@ interface CryptoApi {
     @GET("listings/latest")
     suspend fun getCrypto(
         @Query("limit") limit: Int,
-        @Header("X-CMC_PRO_API_KEY") key: String,
-        @Query("sort") value: String = CONSTANTS.SORT_KEY
+        @Header("X-CMC_PRO_API_KEY") key: String
     ): Response
 
     @GET("info")

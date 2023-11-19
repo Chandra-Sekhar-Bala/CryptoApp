@@ -35,12 +35,49 @@ class ExchangeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         activity?.findViewById<TextView>(R.id.current_frag_name)?.text = "Exchanges"
+        binding.rcyView.adapter = adapter
+        setOnClickListeners()
         return binding.root
+    }
+
+    private fun setOnClickListeners() {
+        binding.linearLayout.setOnClickListener {
+            binding.filterOption.visibility = when (binding.filterOption.visibility) {
+                View.VISIBLE -> View.GONE
+                View.GONE -> View.VISIBLE
+                else -> View.VISIBLE
+            }
+        }
+
+        binding.byCmcRank.setOnClickListener {
+            hideFilter()
+            viewModel.sortDataByCMCRank()
+        }
+
+
+        binding.byPrice.setOnClickListener {
+            hideFilter()
+            viewModel.sortDataByPrice()
+        }
+
+
+        binding.byTime.setOnClickListener {
+            hideFilter()
+            viewModel.sortDataByTime()
+        }
+
+        binding.homeLayout.setOnClickListener {
+            hideFilter()
+        }
+    }
+
+    private fun hideFilter() {
+        binding.filterOption.visibility = View.GONE
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rcyView.adapter = adapter
+
 
         lifecycleScope.launch {
             viewModel.cryptoData.collect { updatedDataList ->

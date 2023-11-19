@@ -3,6 +3,8 @@ package com.cryptoapp.demo.ui.exchangeFrag
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.cryptoapp.demo.helper.CONSTANTS
+import com.cryptoapp.demo.helper.toUnixTime
+import com.cryptoapp.demo.model.SortBy
 import com.cryptoapp.demo.model.cryptoInfo.Data
 import com.cryptoapp.demo.model.logo.LogoCache
 import com.cryptoapp.demo.repository.network.CryptoApi
@@ -30,9 +32,26 @@ class ExchangeViewModel @Inject constructor(
     private val refreshIntervalMillis = 60 * 1000L
     private val logoCache = LogoCache()
 
+    private var sortBy = SortBy.CMC_RANK
+
     init {
         // Start refreshing data periodically
         refreshDataPeriodically()
+    }
+
+    fun sortDataByCMCRank() {
+        sortBy = SortBy.CMC_RANK
+        _cryptoData.value = cryptoData.value.sortedBy { it.cmcRank }
+    }
+
+    fun sortDataByPrice() {
+        sortBy = SortBy.PRICE
+        _cryptoData.value = cryptoData.value.sortedBy { it.quote.usd.price }
+    }
+
+    fun sortDataByTime() {
+        sortBy = SortBy.TIME
+        _cryptoData.value = cryptoData.value.sortedBy { it.time.toLong() }
     }
 
     // api data changes at every 60s
@@ -70,6 +89,7 @@ class ExchangeViewModel @Inject constructor(
                             cryptoItem.id,
                             cryptoItem.name,
                             cryptoItem.symbol,
+                            cryptoItem.time.toUnixTime().toString(),
                             cryptoItem.cmcRank,
                             cryptoItem.quote,
                             logo
@@ -78,9 +98,16 @@ class ExchangeViewModel @Inject constructor(
                 }
             }.collect { updatedData ->
                 // Update UI with the updated item
-                _cryptoData.value =
-                    (_cryptoData.value + updatedData.single())
-                        .distinctBy { it.id }
+                _cryptoData.value = (_cryptoData.value + updatedData.single())
+                    .distinctBy { it.id }
+                    .sortedBy {
+                        when (sortBy) {
+                            SortBy.CMC_RANK -> it.cmcRank as Comparable<Any>
+                            SortBy.PRICE -> it.quote.usd.price as Comparable<Any>
+                            SortBy.TIME -> it.time.toLong() as Comparable<Any>
+                        }
+                    }
+
             }
 
         } catch (e: Exception) {

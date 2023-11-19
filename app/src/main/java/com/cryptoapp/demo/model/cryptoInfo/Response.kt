@@ -20,6 +20,9 @@ data class Data(
     @SerializedName("symbol")
     val symbol: String,
 
+    @SerializedName("last_updated")
+    val time: String,
+
     @SerializedName("cmc_rank")
     val cmcRank: Int,
 

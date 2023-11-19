@@ -14,4 +14,7 @@
     <string name="top_cryptocurrencies">Top Cryptocurrencies</string>
     <string name="price">$%s USD</string>
     <string name="btc">BTC</string>
+    <string name="volume_24h">Volume 24h</string>
+    <string name="price_">Price</string>
+    <string name="cmc_rank">Cmc Rank</string>
 </resources>
