@@ -88,8 +88,12 @@ class ExchangeFragment : Fragment() {
                         showFirstDataToCard(updatedDataList[0])
                         lock = !lock
                     }
-                } catch (_: Exception){}
+                } catch (_: Exception) {
+                }
                 adapter?.submitList(updatedDataList)
+                if (binding.progress.visibility == View.VISIBLE) {
+                    binding.progress.visibility = View.GONE
+                }
             }
         }
     }
