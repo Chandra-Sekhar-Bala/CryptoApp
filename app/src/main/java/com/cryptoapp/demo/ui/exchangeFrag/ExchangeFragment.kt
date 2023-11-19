@@ -52,18 +52,21 @@ class ExchangeFragment : Fragment() {
         binding.byCmcRank.setOnClickListener {
             hideFilter()
             viewModel.sortDataByCMCRank()
+            binding.rcyView.scrollToPosition(0)
         }
 
 
         binding.byPrice.setOnClickListener {
             hideFilter()
             viewModel.sortDataByPrice()
+            binding.rcyView.scrollToPosition(0)
         }
 
 
         binding.byTime.setOnClickListener {
             hideFilter()
             viewModel.sortDataByTime()
+            binding.rcyView.scrollToPosition(0)
         }
 
         binding.homeLayout.setOnClickListener {
@@ -87,13 +90,11 @@ class ExchangeFragment : Fragment() {
                     if (!lock) {
                         showFirstDataToCard(updatedDataList[0])
                         lock = !lock
+                        binding.progress.visibility = View.GONE
                     }
                 } catch (_: Exception) {
                 }
                 adapter?.submitList(updatedDataList)
-                if (binding.progress.visibility == View.VISIBLE) {
-                    binding.progress.visibility = View.GONE
-                }
             }
         }
     }

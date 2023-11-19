@@ -187,17 +187,6 @@
         tools:listitem="@layout/item_crypto"
         app:layout_constraintTop_toBottomOf="@+id/top_crypto_txt" />
 
-    <ProgressBar
-        android:id="@+id/progress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/Widget.AppCompat.Light.DropDownItem.Spinner"
-        app:layout_constraintStart_toStartOf="@+id/rcyView"
-        app:layout_constraintEnd_toEndOf="@id/rcyView"
-        app:layout_constraintTop_toTopOf="@id/rcyView"
-        app:layout_constraintBottom_toBottomOf="@id/rcyView"
-        />
-
     <LinearLayout
         android:id="@+id/filter_option"
         android:layout_width="wrap_content"
@@ -288,6 +277,17 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
