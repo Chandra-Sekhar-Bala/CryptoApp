@@ -23,7 +23,7 @@ class ExchangeAdapter(val context: Context) :
 
             Glide.with(context)
                 .load(item.logo)
-                .placeholder(ContextCompat.getDrawable(context, R.drawable.ic_bitcoin))
+                .placeholder(ContextCompat.getDrawable(context, R.drawable.ic_loading))
                 .into(binding.topIcon)
 
             binding.topCodeName.text = item.symbol
@@ -50,7 +50,6 @@ class ExchangeAdapter(val context: Context) :
                         R.drawable.ic_profit else R.drawable.ic_loss
                 )
             )
-
         }
     }
 

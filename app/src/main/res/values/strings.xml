@@ -13,4 +13,5 @@
     <string name="bitcoin">Bitcoin</string>
     <string name="top_cryptocurrencies">Top Cryptocurrencies</string>
     <string name="price">$%s USD</string>
+    <string name="btc">BTC</string>
 </resources>

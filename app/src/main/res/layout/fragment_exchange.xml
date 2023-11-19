@@ -93,7 +93,7 @@
             android:layout_height="@dimen/_35sdp"
             android:layout_marginStart="@dimen/_16sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:src="@drawable/ic_bitcoin"
+            android:src="@drawable/ic_loading"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,7 +104,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_10sdp"
             android:fontFamily="@font/inter_bold"
-            android:text="BTC"
+            android:text="@string/btc"
             android:textSize="@dimen/_16ssp"
             app:layout_constraintStart_toEndOf="@+id/top_icon"
             app:layout_constraintTop_toTopOf="@+id/top_icon" />
